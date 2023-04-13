@@ -19,11 +19,11 @@ class GPT:
             max_tokens=250,
             n=1,
             stop=None,
-            temperature=1,
+            temperature=0.5,
             presence_penalty = 1
         )
 
-        print(completions)
+        #print(completions)
         return completions.choices[0].text
 
         # Afficher la réponse
@@ -32,7 +32,7 @@ class GPT:
 
 
 
-test = GPT("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")
+test = GPT("OPENAI_API_KEY"
 
 """
 question = "Qui est tu ?"
