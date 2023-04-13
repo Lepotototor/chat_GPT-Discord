@@ -32,7 +32,7 @@ class GPT:
 
 
 
-test = GPT("OPENAI_API_KEY"
+test = GPT("OPENAI_API_KEY")
 
 """
 question = "Qui est tu ?"

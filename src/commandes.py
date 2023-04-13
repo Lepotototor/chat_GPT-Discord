@@ -7,7 +7,7 @@ class Commandes(commands.Bot):
      def __init__(self, bot):
          super().__init__(command_prefix="!", intents=bot.intents)
          self._bot_commands  = bot
-         self._liste_commandes = [hello]
+         self._liste_commandes = [hello, sourcecode]
          self._liste_commandes_str = [str(el) for el in self._liste_commandes]
 
      async def exe_commandes(self, ligne, channel):
@@ -21,6 +21,10 @@ playlist = []
 @commands.command()
 async def hello(channel, reste_ligne):
     await channel.send('Hello !')
+
+@commands.command()
+async def sourcecode(channel, reste_ligne):
+    await channel.send("Mon code source est disponible à cet endroit : 'https://github.com/Lepotototor/chat_GPT-Discord'")
 
 @commands.command()
 async def join(channel, reste_ligne):
