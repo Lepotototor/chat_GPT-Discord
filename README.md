@@ -14,4 +14,5 @@ python librairies
 - Openai API
 - discord
 - python-dotenv
+
 pip install -U pillow openai discord python-dotenv
