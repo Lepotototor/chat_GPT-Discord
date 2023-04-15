@@ -10,7 +10,7 @@ class DALLE:
         openai.api_key = key
         self._dalle_url = "https://api.openai.com/v1/images/generations"
 
-    def générerImage(self, prompt):
+    async def générerImage(self, prompt):
         # Set up json
         params = {
             "model": "image-alpha-001",

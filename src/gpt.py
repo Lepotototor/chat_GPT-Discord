@@ -5,7 +5,7 @@ class GPT:
         # Définir votre clé API
         openai.api_key = key
 
-    def reponse_a_question(self, question):
+    async def reponse_a_question(self, question):
         # Définir le modèle à utiliser
         model_engine = "text-davinci-002"
         #model_engine = "davinci"
@@ -32,7 +32,7 @@ class GPT:
 
 
 
-test = GPT("OPENAI_API_KEY")
+test = GPT("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")
 
 """
 question = "Qui est tu ?"

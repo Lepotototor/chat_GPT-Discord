@@ -105,7 +105,7 @@ class Bot(commands.Bot):
             elif channel.id == self._gpt_channel:
                 print("Question à Chat GPT")
                 try:
-                    reponse = self._chat_GPT.reponse_a_question(message.content)
+                    reponse = await self._chat_GPT.reponse_a_question(message.content)
                     await channel.send(reponse)
                 except:
                     await channel.send("Désolé je n'arrive pas à répondre à votre question")
@@ -113,7 +113,7 @@ class Bot(commands.Bot):
             elif channel.id == self._dalle_channel:
                 print("Générer image")
                 try:
-                    image = self._dall_e.générerImage(message.content)
+                    image = await self._dall_e.générerImage(message.content)
                     image.save("dalle.png")
 
                     await channel.send(file=discord.File("dalle.png"))
